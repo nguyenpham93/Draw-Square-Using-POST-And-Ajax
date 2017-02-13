@@ -1,0 +1,23 @@
+{
+  "name": "vehinhvuong",
+  "version": "1.0.0",
+  "description": "Draw square",
+  "main": "index.js",
+  "scripts": {
+    "test": "Mocha -S"
+  },
+  "keywords": [
+    "Draw",
+    "Square"
+  ],
+  "author": "bluevn",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "body-parser": "^1.16.1",
+    "chai": "^3.5.0",
+    "express": "^4.14.1",
+    "nunjucks": "^3.0.0",
+    "readline-sync": "^1.4.6"
+  }
+}

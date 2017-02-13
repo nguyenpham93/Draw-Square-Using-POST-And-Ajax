@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Draw Square By Using AJAX & Async-Await</h1>
+    <form id="myForm">
+        Nhập m : <input id="m" name ="m" type="text" ></br>
+        Nhập n : <input id="n" name ="n" type="text" ></br>
+    </form>
+    <button onclick="renderSquare()">Submit</button>
+    <h3 id="showResult"> Kết quả : </h3>
+    <script>
+    function renderSquare(){
+        var inputs = $("#myForm").serialize();
+        $.ajax({
+        type : "POST",
+        url : "/",
+        data : inputs,
+        dataType : "json",
+        success : function(data){
+            $("#showResult").text("Kết quả : ".concat(data.result));
+        } 
+    });
+    }
+    </script>
+</body>
+</html>
